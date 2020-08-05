@@ -1,0 +1,27 @@
+\documentclass[a4paper, 11pt]{report}
+
+% Configuration
+\usepackage{configuration}
+
+% Opening
+\title{Der Titel}
+\author{Der Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% Chapters
+\input{./tex/intro.tex}
+\input{./tex/conclusion.tex}
+
+% Bibliography
+\clearpage
+\input{./tex/bibliography.tex}
+
+% Appendix
+\clearpage
+\input{./tex/appendix.tex}
+
+\end{document}

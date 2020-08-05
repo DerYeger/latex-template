@@ -1,0 +1,72 @@
+\ProvidesPackage{configuration}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{headheight=14pt}
+
+\usepackage[%
+backend=biber,
+sorting=none,
+natbib=true,
+style=numeric,
+autocite=inline
+]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{booktabs}
+\usepackage{listings}
+\lstdefinestyle{simpleListing}{
+	language=Bash,
+	numbers=left,
+	numbersep=10pt,
+	numberstyle = \tiny,
+	tabsize=4,
+	showspaces=false,
+	showstringspaces=false,
+	basicstyle=\small\ttfamily,
+	breaklines=true,
+	xleftmargin=0.1\textwidth,
+	captionpos=b,
+}
+
+\defbibenvironment{sources}
+{\list
+	{}
+	{\setlength{\leftmargin}{\bibhang}%
+		\setlength{\itemindent}{-\leftmargin}%
+		\setlength{\itemsep}{\bibitemsep}%
+		\setlength{\parsep}{\bibparsep}}}
+{\endlist}
+{\item}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\fancyhead[OL]{\nouppercase{\leftmark}}
+\cfoot{\thepage}
+
+\usepackage{float}
+\newfloat{lstfloat}{htb}{lop}
+
+\usepackage[ngerman]{isodate, babel}
+\usepackage{csquotes}
+
+\usepackage{lmodern}
+
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subfig}
+\newcommand{\subfigureautorefname}{\figureautorefname}
+
+\usepackage{ragged2e}
+
+\usepackage[toc,page]{appendix}
+\renewcommand\appendixname{Anhang}
+\renewcommand\appendixpagename{Anhang}
+
+\overfullrule=1mm
